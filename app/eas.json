@@ -1,0 +1,29 @@
+{
+  "cli": {
+    "version": ">= 10.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "ios": {
+        "image": "macos-14"
+      },
+      "android": {
+        "image": "ubuntu-latest"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

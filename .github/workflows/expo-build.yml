@@ -1,0 +1,36 @@
+name: 'Expo React Native - EAS Build'
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - '.github/workflows/expo-build.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './app/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: ./app
+        run: npm ci
+
+      - name: Setup Expo
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Build iOS (IPA)
+        working-directory: ./app
+        run: eas build --platform ios --non-interactive --no-wait
+
+      - name: Build Android (APK)
+        working-directory: ./app
+        run: eas build --platform android --non-interactive --no-wait

@@ -1,0 +1,13 @@
+﻿# Auto detect text files and perform LF normalization
+* text=auto
+
+# Chinese filenames
+*.swift text encoding=UTF-8
+*.ts text encoding=UTF-8
+*.tsx text encoding=UTF-8
+*.js text encoding=UTF-8
+*.json text encoding=UTF-8
+*.yml text encoding=UTF-8
+*.md text encoding=UTF-8
+*.plist text encoding=UTF-8
+*.html text encoding=UTF-8

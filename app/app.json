@@ -1,0 +1,44 @@
+﻿{
+  "expo": {
+    "name": "粤语流利说",
+    "slug": "yueyuliulishuo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B6B"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yueyuliulishuo.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "粤语流利说需要语音识别权限来评估您的粤语发音",
+        "NSMicrophoneUsageDescription": "粤语流利说需要麦克风权限来进行语音练习"
+      }
+    },
+    "android": {
+      "package": "com.yueyuliulishuo.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B6B"
+      },
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "scope": "/",
+      "display": "standalone",
+      "startUrl": "/",
+      "lang": "zh-CN"
+    },
+    "plugins": [
+      "expo-speech",
+      "expo-av"
+    ]
+  }
+}

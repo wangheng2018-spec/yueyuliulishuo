@@ -1,0 +1,19 @@
+﻿// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        /* Project object */
+        1A2B3C4D5E6F7G8H9I0J :: {isa = PBXProject; buildConfigurationList = ; compatibilityVersion = "Xcode 14.0"; developmentRegion = "zh-Hans"; hasScannedForEncodings = 0; knownRegions = ("zh-Hans", "en", "yue", "Base"); mainGroup = A1B2C3D4E5F6G7H8I9J0K; productRefGroup = ; projectDirPath = ""; targets = (TARGET_MAIN); };
+        /* End project object */
+        
+        /* Main group */
+        A1B2C3D4E5F6G7H8I9J0K :: {isa = PBXGroup; children = (SOURCE_GROUP, PRODUCT_GROUP, RESOURCE_GROUP); sourceTree = "<group>"; };
+        SOURCE_GROUP :: {isa = PBXGroup; children = (); name = "粤语流利说"; path = "粤语流利说"; sourceTree = SOURCE_ROOT; };
+        PRODUCT_GROUP :: {isa = PBXGroup; children = (); name = Products; sourceTree = "<group>"; };
+        RESOURCE_GROUP :: {isa = PBXGroup; children = (); name = Resources; sourceTree = "<group>"; };
+        /* End groups */
+    };
+    rootObject = 1A2B3C4D5E6F7G8H9I0J;
+}
