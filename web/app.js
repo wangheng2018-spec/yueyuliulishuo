@@ -1,4 +1,4 @@
-﻿const COURSES_DATA = [
+const COURSES_DATA = [
 {id:"pronunciation",title:"粤语发音入门",icon:"🎙",color:"#FF6B6B",cat:"pronunciation",diff:"beginner",premium:false,order:1,desc:"掌握粤语六个声调和声韵母系统",lessons:[
 {id:"pr1",title:"声调入门",order:1,dialogues:[{id:"d1",sp:"老师",ca:"粵語有六個聲調",jp:"Jyut6 jyu5 jau5 luk6 go3 seng1 diu6",zh:"粤语有六个声调"},{id:"d2",sp:"老师",ca:"第一聲係高平，第二聲係高升",zh:"第一声高平第二声高升"}],voc:[{ca:"詩",jp:"si1",zh:"诗",ex:"呢首詩寫得好好"},{ca:"史",jp:"si2",zh:"史",ex:"中國有悠久嘅歷史"}],tips:["粤语有六个声调","声调不同意思完全不同"],pr:[{ca:"你好",jp:"nei5 hou2",zh:"你好"},{ca:"早晨",jp:"zou2 san4",zh:"早上好"}]},
 {id:"pr2",title:"声母学习",order:2,dialogues:[],voc:[],tips:[],pr:[]},{id:"pr3",title:"韵母学习",order:3,dialogues:[],voc:[],tips:[],pr:[]}]},
@@ -139,7 +139,7 @@ function rShop(){
   document.getElementById("vipPlans").innerHTML=plansHtml;
   document.getElementById("purchaseBtn").textContent="立即开通 · "+VIP_PLANS[1].price;
 }
-function slP(i){const plans=document.querySelectorAll(".vip-plan");for(let j=0;j<plans.length;j++){plans[j].classList.toggle("selected",j===i);plans[j].querySelector(".vip-radio").innerHTML=j===i?"<div class="vip-radio-inner"></div>":"""}document.getElementById("purchaseBtn").textContent="立即开通 · "+VIP_PLANS[i].price;}
+function slP(i){const plans=document.querySelectorAll(".vip-plan");for(let j=0;j<plans.length;j++){plans[j].classList.toggle("selected",j===i);plans[j].querySelector(".vip-radio").innerHTML=j===i?'<div class="vip-radio-inner"></div>':""}document.getElementById("purchaseBtn").textContent="立即开通 · "+VIP_PLANS[i].price;}
 function pV(){S.isVip=true;S.vipType="monthly";sv();rn();alert("🎉 VIP开通成功！");shP("home");}
 function sp(t){if(window.speechSynthesis){const u=new SpeechSynthesisUtterance(t);u.lang="yue-HK";u.rate=0.7;u.pitch=S.av==="female"?1.3:0.8;window.speechSynthesis.speak(u);}}
 function shP(n){
@@ -150,5 +150,12 @@ function shP(n){
   if(n==="courses")rCourses();if(n==="ai")rAI();if(n==="profile")rProfile();
   if(n==="home"){document.getElementById("headerTitle").textContent="粤语流利说";document.getElementById("headerControls").style.display="none";}
 }
+
+function showPage(n){ shP(n); }
+function toggleTranslation(){ tT(); }
+function goBack(){ gB(); }
+function completeLesson(){ cL(); }
+function purchaseVip(){ pV(); }
+
 rn();
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(function(){});}
